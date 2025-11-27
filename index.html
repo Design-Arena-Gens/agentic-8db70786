@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pelican Hellrider ? Heavy Metal Ver (SVG)</title>
+  <meta name="description" content="2D?????????????????????????????????????" />
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #0a0b0f;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      overflow: hidden;
+    }
+    .wrap {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      width: min(96vw, 820px);
+      aspect-ratio: 16/9;
+      background: linear-gradient(180deg, #0c0d12 0%, #07080c 100%);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      box-shadow: 0 12px 50px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.03);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .label {
+      position: absolute;
+      top: 10px;
+      left: 14px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: #9aa3b2;
+      text-transform: uppercase;
+      user-select: none;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="label">Pelican Hellrider ? Heavy Metal Ver ? Right Facing</div>
+
+      <!-- Compact, high-density, multi-layered SVG (no flat 10x10 planes) -->
+      <svg viewBox="0 0 512 288" xmlns="http://www.w3.org/2000/svg" aria-label="Pelican Hellrider Heavy Metal Version, Right Facing">
+        <defs>
+          <!-- Micro-noise to eliminate monotone surfaces -->
+          <filter id="noise" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence baseFrequency="0.9" numOctaves="2" seed="7" type="fractalNoise" result="n"/>
+            <feColorMatrix type="saturate" values="0"/>
+            <feComponentTransfer>
+              <feFuncA type="table" tableValues="0 0.06" />
+            </feComponentTransfer>
+            <feBlend mode="multiply" in2="SourceGraphic" />
+          </filter>
+
+          <!-- Fine metal brushing texture -->
+          <pattern id="brush" patternUnits="userSpaceOnUse" width="3" height="3">
+            <path d="M0,0 L3,3 M-1,1 L2,4 M1,-1 L4,2" stroke="#aab1bb" stroke-width="0.15" opacity="0.35"/>
+          </pattern>
+
+          <!-- Carbon fiber micro pattern -->
+          <pattern id="carbon" patternUnits="userSpaceOnUse" width="4" height="4">
+            <rect x="0" y="0" width="4" height="4" fill="#1b1e22"/>
+            <path d="M0,1 L1,0 M1,2 L2,1 M2,3 L3,2 M3,4 L4,3" stroke="#2b3036" stroke-width="0.8"/>
+            <path d="M0,3 L1,2 M1,4 L2,3" stroke="#101317" stroke-width="0.8"/>
+          </pattern>
+
+          <!-- Micro hatch for matte zones -->
+          <pattern id="hatch" patternUnits="userSpaceOnUse" width="2" height="2" patternTransform="rotate(22)">
+            <path d="M0,0 L0,2" stroke="#242833" stroke-width="0.4" />
+          </pattern>
+
+          <!-- Heat-vent ribbing pattern -->
+          <pattern id="ribs" patternUnits="userSpaceOnUse" width="3" height="3">
+            <rect width="3" height="3" fill="#14161b" />
+            <rect x="0" y="0.2" width="3" height="0.6" fill="#2a2f38"/>
+            <rect x="0" y="1.6" width="3" height="0.6" fill="#0f1216"/>
+          </pattern>
+
+          <!-- Wiring loom pattern -->
+          <pattern id="wires" patternUnits="userSpaceOnUse" width="6" height="6">
+            <rect width="6" height="6" fill="#0d0f13" />
+            <path d="M0,1 C2,0 4,2 6,1" stroke="#e23b3b" stroke-width="0.5"/>
+            <path d="M0,3 C2,2 4,4 6,3" stroke="#22b8cf" stroke-width="0.5"/>
+            <path d="M0,5 C2,4 4,6 6,5" stroke="#ffc107" stroke-width="0.5"/>
+          </pattern>
+
+          <!-- Chrome and hot metal gradients -->
+          <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f2f5f8"/>
+            <stop offset="30%" stop-color="#7e8a98"/>
+            <stop offset="55%" stop-color="#e6ebf0"/>
+            <stop offset="75%" stop-color="#5a6470"/>
+            <stop offset="100%" stop-color="#cfd6dd"/>
+          </linearGradient>
+          <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#ff6a00"/>
+            <stop offset="40%" stop-color="#ffd400"/>
+            <stop offset="80%" stop-color="#ff2e63"/>
+            <stop offset="100%" stop-color="#f0f"/>
+          </linearGradient>
+
+          <!-- Neon sensor glow -->
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.6" result="b"/>
+            <feMerge>
+              <feMergeNode in="b"/>
+              <feMergeNode in="b"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+
+          <!-- Bolt symbol to replicate -->
+          <symbol id="bolt" viewBox="0 0 10 10">
+            <circle cx="5" cy="5" r="4.2" fill="url(#chrome)"/>
+            <circle cx="5" cy="5" r="3.2" fill="url(#hatch)"/>
+            <path d="M2.2,5 L7.8,5" stroke="#0e1116" stroke-width="0.7"/>
+            <circle cx="5" cy="5" r="1.2" fill="#14181f"/>
+          </symbol>
+
+          <!-- Feather vane pattern for pelican -->
+          <pattern id="featherVane" patternUnits="userSpaceOnUse" width="3" height="3">
+            <rect width="3" height="3" fill="#20242c"/>
+            <path d="M0,1.5 L3,1.5" stroke="#3b414c" stroke-width="0.4"/>
+            <path d="M0.5,0 L1.2,0.9 M1.5,0 L2.2,0.9 M2.5,0 L3,0.6" stroke="#13161c" stroke-width="0.4"/>
+          </pattern>
+
+          <!-- Tarmac micro detail pattern for ground -->
+          <pattern id="tarmac" patternUnits="userSpaceOnUse" width="4" height="4">
+            <rect width="4" height="4" fill="#0c0d11"/>
+            <circle cx="1" cy="1" r="0.4" fill="#1a1d24"/>
+            <circle cx="3" cy="2" r="0.3" fill="#151821"/>
+            <circle cx="2" cy="3.2" r="0.35" fill="#1c2028"/>
+          </pattern>
+
+          <!-- Motion blur hint for wheels -->
+          <filter id="rimBlur" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="0.6"/>
+          </filter>
+        </defs>
+
+        <!-- Background grid and noise to avoid flat planes -->
+        <g filter="url(#noise)">
+          <rect x="0" y="0" width="512" height="288" fill="#0a0b0f"/>
+          <g opacity="0.18">
+            <path d="M0,16 H512 M0,32 H512 M0,48 H512 M0,64 H512 M0,80 H512 M0,96 H512 M0,112 H512 M0,128 H512 M0,144 H512 M0,160 H512 M0,176 H512 M0,192 H512 M0,208 H512 M0,224 H512 M0,240 H512 M0,256 H512 M0,272 H512" stroke="#12151c" stroke-width="0.6"/>
+            <path d="M16,0 V288 M32,0 V288 M48,0 V288 M64,0 V288 M80,0 V288 M96,0 V288 M112,0 V288 M128,0 V288 M144,0 V288 M160,0 V288 M176,0 V288 M192,0 V288 M208,0 V288 M224,0 V288 M240,0 V288 M256,0 V288 M272,0 V288 M288,0 V288 M304,0 V288 M320,0 V288 M336,0 V288 M352,0 V288 M368,0 V288 M384,0 V288 M400,0 V288 M416,0 V288 M432,0 V288 M448,0 V288 M464,0 V288 M480,0 V288 M496,0 V288" stroke="#12151c" stroke-width="0.6"/>
+          </g>
+        </g>
+
+        <!-- Ground / shadow plane with micro tarmac detail -->
+        <g id="ground">
+          <path d="M0,226 C128,214 256,228 512,220 L512,288 L0,288 Z" fill="url(#tarmac)"/>
+          <path d="M24,234 C160,222 360,236 488,228" stroke="#1a1e26" stroke-width="2" opacity="0.5"/>
+        </g>
+
+        <!-- Bike + Rider Group (right facing) -->
+        <g id="hellrider" transform="translate(36,8)">
+          <!-- Rear wheel -->
+          <g id="rearWheel" transform="translate(112,196)">
+            <circle r="46" fill="#0d1015"/>
+            <circle r="44" fill="url(#carbon)"/>
+            <circle r="38" fill="#0a0c10"/>
+            <g filter="url(#rimBlur)">
+              <g opacity="0.8">
+                <path d="M0,-38 A38,38 0 0 1 36, -10" stroke="url(#chrome)" stroke-width="3"/>
+                <path d="M-36,-10 A38,38 0 0 1 0,-38" stroke="#303844" stroke-width="2.2"/>
+              </g>
+            </g>
+            <g id="spokes" stroke="#7f8a98" stroke-width="1">
+              <path d="M0,0 L0,-36"/>
+              <path d="M0,0 L31.2,-18"/>
+              <path d="M0,0 L34,0"/>
+              <path d="M0,0 L31.2,18"/>
+              <path d="M0,0 L0,36"/>
+              <path d="M0,0 L-31.2,18"/>
+              <path d="M0,0 L-34,0"/>
+              <path d="M0,0 L-31.2,-18"/>
+            </g>
+            <circle r="8.5" fill="url(#chrome)"/>
+            <circle r="3.6" fill="#11151b"/>
+          </g>
+
+          <!-- Front wheel (slightly larger for aggressive stance) -->
+          <g id="frontWheel" transform="translate(322,206)">
+            <circle r="52" fill="#0d1015"/>
+            <circle r="50" fill="url(#carbon)"/>
+            <circle r="43" fill="#0a0c10"/>
+            <g filter="url(#rimBlur)">
+              <g opacity="0.85">
+                <path d="M0,-43 A43,43 0 0 1 41, -12" stroke="url(#chrome)" stroke-width="3.2"/>
+                <path d="M-41,-12 A43,43 0 0 1 0,-43" stroke="#303844" stroke-width="2.4"/>
+              </g>
+            </g>
+            <g id="spokes2" stroke="#7f8a98" stroke-width="1">
+              <path d="M0,0 L0,-41"/>
+              <path d="M0,0 L35,-20"/>
+              <path d="M0,0 L38,0"/>
+              <path d="M0,0 L35,20"/>
+              <path d="M0,0 L0,41"/>
+              <path d="M0,0 L-35,20"/>
+              <path d="M0,0 L-38,0"/>
+              <path d="M0,0 L-35,-20"/>
+            </g>
+            <circle r="9.5" fill="url(#chrome)"/>
+            <circle r="4.2" fill="#11151b"/>
+          </g>
+
+          <!-- Internal frame and drive train -->
+          <g id="frame" transform="translate(108,126)">
+            <!-- Main triangular frame -->
+            <path d="M0,24 L98,-6 L176,6 L84,40 Z" fill="url(#brush)" stroke="#2a2f39" stroke-width="1.2"/>
+            <!-- Subframe lattice -->
+            <path d="M12,22 L96,0 L164,10 M30,30 L120,10" stroke="#586273" stroke-width="1"/>
+            <!-- Engine block (layered) -->
+            <g id="engine" transform="translate(44,12)">
+              <rect x="0" y="-8" width="62" height="34" rx="2" fill="url(#hatch)" stroke="#222834"/>
+              <rect x="6" y="-3" width="50" height="10" fill="url(#ribs)"/>
+              <rect x="6" y="9" width="50" height="8" fill="url(#ribs)"/>
+              <path d="M2,22 L60,22 L56,28 L6,28 Z" fill="url(#brush)"/>
+              <!-- Bolts -->
+              <use href="#bolt" x="6" y="-6" width="10" height="10"/>
+              <use href="#bolt" x="46" y="-6" width="10" height="10"/>
+              <use href="#bolt" x="6" y="20" width="10" height="10"/>
+              <use href="#bolt" x="46" y="20" width="10" height="10"/>
+            </g>
+            <!-- Chain drive and sprocket -->
+            <g id="drive" transform="translate(18,32)">
+              <circle cx="24" cy="26" r="10" fill="#0f1217" stroke="#2a2f39"/>
+              <g>
+                <path d="M24,16 L132,6" stroke="#8a94a3" stroke-width="1.2"/>
+                <path d="M132,6 L162,20" stroke="#8a94a3" stroke-width="1.2"/>
+                <path d="M162,20 L28,36" stroke="#8a94a3" stroke-width="1.2"/>
+                <path d="M28,36 L24,16" stroke="#8a94a3" stroke-width="1.2"/>
+              </g>
+              <circle cx="162" cy="20" r="9" fill="#0f1217" stroke="#2a2f39"/>
+            </g>
+            <!-- Exhaust headers -->
+            <g id="exhaust" transform="translate(100,4)">
+              <path d="M0,6 C22,-8 56,-10 94,-2 C118,3 136,10 146,20" fill="none" stroke="url(#chrome)" stroke-width="3"/>
+              <path d="M-6,12 C18,-2 48,-4 84,6 C108,12 126,18 140,26" fill="none" stroke="#4e5868" stroke-width="1.2"/>
+            </g>
+          </g>
+
+          <!-- Bodywork / armor -->
+          <g id="armor" transform="translate(98,94)">
+            <!-- Tank -->
+            <path d="M12,10 C40,-8 96,-12 156,0 C168,3 176,10 178,18 C168,28 126,40 74,42 C40,40 18,26 12,10 Z" fill="url(#brush)" stroke="#2d333e" stroke-width="1.2"/>
+            <!-- Panel seams -->
+            <path d="M32,12 C74,8 120,8 158,14" stroke="#0e1218" stroke-width="0.8"/>
+            <path d="M24,24 C52,20 120,22 168,26" stroke="#0e1218" stroke-width="0.8"/>
+            <!-- Side fairing -->
+            <path d="M-2,42 C24,28 52,34 74,40 C86,44 112,52 124,58 C130,62 136,66 138,70 C128,74 104,78 82,76 C52,72 20,58 -2,42 Z" fill="url(#hatch)" stroke="#2a2f39"/>
+            <!-- Bolt rows -->
+            <g transform="translate(8,36)">
+              <use href="#bolt" x="0" y="0" width="9" height="9"/>
+              <use href="#bolt" x="18" y="4" width="9" height="9"/>
+              <use href="#bolt" x="36" y="8" width="9" height="9"/>
+              <use href="#bolt" x="54" y="10" width="9" height="9"/>
+            </g>
+          </g>
+
+          <!-- External weapons/sensors wiring -->
+          <g id="weapons" transform="translate(244,110)">
+            <g id="cannon" transform="translate(0,0)">
+              <rect x="0" y="-6" width="96" height="12" rx="2" fill="url(#carbon)" stroke="#262c37"/>
+              <rect x="82" y="-4" width="24" height="8" rx="2" fill="url(#chrome)"/>
+              <circle cx="104" cy="0" r="3.4" fill="#0d1015" stroke="#545f6e"/>
+              <circle cx="20" cy="0" r="2.2" fill="#20e6ff" filter="url(#glow)"/>
+            </g>
+            <g id="loom" transform="translate(-34,14)">
+              <rect x="0" y="0" width="120" height="14" rx="2" fill="url(#wires)"/>
+              <path d="M-24,7 C-10,2 -4,2 0,7 C6,12 12,12 20,8 C28,4 36,4 44,8 C52,12 60,12 68,8 C76,4 84,4 92,8 C100,12 108,12 116,8" stroke="#0e1116" stroke-width="1" fill="none" opacity="0.5"/>
+            </g>
+          </g>
+
+          <!-- Handlebars / front assembly -->
+          <g id="front" transform="translate(296,102)">
+            <path d="M0,0 L18,-10 L62,-8" stroke="#8f99a8" stroke-width="2"/>
+            <circle cx="64" cy="-8" r="6" fill="url(#chrome)"/>
+            <rect x="56" y="-18" width="12" height="8" rx="1.2" fill="#151922" stroke="#2a2f39"/>
+            <circle cx="62" cy="-14" r="2" fill="#00e5ff" filter="url(#glow)"/>
+          </g>
+
+          <!-- Pelican rider (right facing) -->
+          <g id="rider" transform="translate(190,40)">
+            <!-- Neck and head base -->
+            <path d="M-12,60 C-8,40 12,22 36,20 C44,20 52,24 60,28 C72,34 84,46 88,58 C82,56 70,52 58,52 C48,54 36,62 26,70 C14,64 2,62 -12,60 Z" fill="url(#featherVane)" stroke="#2b313b"/>
+            <!-- Beak (right-facing) -->
+            <path d="M86,58 C118,52 148,48 178,50 C184,52 186,56 182,60 C158,76 126,80 96,74 C90,66 86,60 86,58 Z" fill="url(#chrome)" stroke="#2d333e"/>
+            <path d="M92,66 C120,64 148,62 172,62" stroke="#10141a" stroke-width="1" opacity="0.6"/>
+            <!-- Eye and sensor augments -->
+            <g transform="translate(74,52)">
+              <circle cx="0" cy="0" r="5" fill="#0f1319"/>
+              <circle cx="0" cy="0" r="3" fill="#00ffee" filter="url(#glow)"/>
+              <circle cx="-6" cy="-4" r="1.2" fill="#ff2e63" filter="url(#glow)"/>
+              <circle cx="-4" cy="3" r="1.2" fill="#ffd400" filter="url(#glow)"/>
+            </g>
+            <!-- Crown/helmet (heavy metal aesthetics) -->
+            <path d="M42,16 C60,8 78,8 96,14 C102,18 106,22 110,28 C102,32 86,34 70,32 C58,26 50,20 42,16 Z" fill="url(#hatch)" stroke="#2a2f39"/>
+            <g id="crest" transform="translate(52,10) rotate(-6)">
+              <path d="M0,0 C4,-6 10,-8 16,-8 C20,-6 24,-2 26,4 C22,6 16,8 8,8 C4,6 2,4 0,0 Z" fill="url(#brush)" stroke="#2a2f39"/>
+            </g>
+            <!-- Torso armor plates -->
+            <g id="torso" transform="translate(6,74)">
+              <rect x="-8" y="-8" width="48" height="16" rx="2" fill="url(#hatch)" stroke="#2a2f39"/>
+              <rect x="40" y="-10" width="38" height="14" rx="2" fill="url(#brush)" stroke="#2a2f39"/>
+              <g transform="translate(-4,-10)">
+                <use href="#bolt" x="0" y="0" width="8" height="8"/>
+                <use href="#bolt" x="14" y="0" width="8" height="8"/>
+                <use href="#bolt" x="28" y="0" width="8" height="8"/>
+              </g>
+            </g>
+            <!-- Arms / gauntlets -->
+            <g id="arms" transform="translate(24,84)">
+              <path d="M0,0 C10,-2 20,-2 28,0 C36,2 46,2 54,0" fill="none" stroke="#8a94a3" stroke-width="2.4"/>
+              <rect x="54" y="-4" width="16" height="8" rx="1.6" fill="url(#carbon)" stroke="#262c37"/>
+              <circle cx="70" cy="0" r="3" fill="#00cfff" filter="url(#glow)"/>
+            </g>
+            <!-- Feather layering to avoid flat planes -->
+            <g id="feathers" transform="translate(10,40)">
+              <path d="M0,0 C6,4 10,10 12,16 C8,18 4,18 0,16 C-2,10 -2,4 0,0 Z" fill="url(#featherVane)" stroke="#2a2f39"/>
+              <path d="M10,4 C16,8 20,14 22,20 C18,22 14,22 10,20 C8,14 8,8 10,4 Z" fill="url(#featherVane)" stroke="#2a2f39"/>
+              <path d="M22,8 C28,12 32,18 34,24 C30,26 26,26 22,24 C20,18 20,12 22,8 Z" fill="url(#featherVane)" stroke="#2a2f39"/>
+            </g>
+          </g>
+
+          <!-- Seat and rear assembly -->
+          <g id="seat" transform="translate(150,132)">
+            <path d="M0,0 C22,-8 46,-10 70,-6 C76,-2 74,4 66,10 C48,16 30,18 12,14 C6,10 2,6 0,0 Z" fill="url(#carbon)" stroke="#262c37"/>
+            <path d="M64,8 C72,2 78,2 84,6" stroke="#0f1217"/>
+          </g>
+
+          <!-- Exhaust flames (heavy metal accent) -->
+          <g id="flame" transform="translate(76,148)">
+            <path d="M0,0 C-16,2 -24,8 -34,6 C-44,4 -52,0 -60,-2 C-50,10 -36,18 -22,14 C-10,10 -4,6 0,0 Z" fill="url(#hot)" opacity="0.9"/>
+            <path d="M-6,2 C-18,6 -30,8 -42,6" stroke="#ffa600" stroke-width="1" opacity="0.7"/>
+          </g>
+
+        </g>
+
+        <!-- Foreground vignette to add depth without flat areas -->
+        <g opacity="0.4" filter="url(#noise)">
+          <path d="M0,0 H512 V14 C384,10 256,6 0,10 Z" fill="#07080c"/>
+          <path d="M0,288 H512 V274 C384,278 256,282 0,278 Z" fill="#07080c"/>
+        </g>
+      </svg>
+
+    </div>
+  </div>
+</body>
+</html>
